@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "assets/css/app.css",
+    "inputFile": "assets/css/app.less"
+  },
+  {
+    "outputFile": "assets/css/vars.css",
+    "inputFile": "assets/css/vars.less"
+  },
+  {
+    "outputFile": "assets/css/mixins.css",
+    "inputFile": "assets/css/mixins.less"
+  }
+]
