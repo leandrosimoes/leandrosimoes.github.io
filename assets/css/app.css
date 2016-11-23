@@ -73,25 +73,54 @@ body #main header:after {
 }
 html #main header .homepage-hero-module,
 body #main header .homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+}
+html #main header .no-video .video-container video,
+body #main header .no-video .video-container video,
+html #main header .touch .video-container video,
+body #main header .touch .video-container video {
+  display: none;
+}
+html #main header .no-video .video-container .poster,
+body #main header .no-video .video-container .poster,
+html #main header .touch .video-container .poster,
+body #main header .touch .video-container .poster {
+  display: block !important;
+}
+html #main header .video-container,
+body #main header .video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  background: #000;
 }
-html #main header .homepage-hero-module .video-container,
-body #main header .homepage-hero-module .video-container {
-  height: 100%;
+html #main header .video-container .poster img,
+body #main header .video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+html #main header .video-container .filter,
+body #main header .video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
 }
-html #main header .homepage-hero-module .video-container video,
-body #main header .homepage-hero-module .video-container video {
-  position: fixed;
-  top: -300px;
-  left: 0;
+html #main header .video-container video,
+body #main header .video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
 }
-html #main header .homepage-hero-module .video-container img,
-body #main header .homepage-hero-module .video-container img {
-  position: fixed;
-  top: -300px;
-  left: 0;
+html #main header .video-container video.fillWidth,
+body #main header .video-container video.fillWidth {
+  width: 100%;
 }
 html #main header .area-welcome,
 body #main header .area-welcome {
