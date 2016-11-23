@@ -1,6 +1,25 @@
-﻿;(function () {
+﻿; (function () {
+    window.addEventListener('load', function () {
+        var video = document.querySelector('.fillWidth');
+        var preloader = document.querySelector('.poster');
+
+        function checkLoad() {
+            if (video.readyState === 4) {
+                $('.fillWidth').toggleClass('hidden');
+                $('.poster').toggleClass('hidden');
+                console.log('foi');
+            } else {
+                setTimeout(checkLoad, 100);
+            }
+        }
+
+        checkLoad();
+    }, false);
+
     //jQuery is required to run this code
     $(document).ready(function () {
+        $('.fillWidth').toggleClass('hidden');
+        $('.poster').toggleClass('hidden');
 
         scaleVideoContainer();
 
@@ -15,6 +34,10 @@
             scaleBannerVideoSize('.video-container video');
         });
 
+        setTimeout(function () {
+            $('.fillWidth source')[0].src = $('.fillWidth source')[0].src + '?' + new Date().getTime();
+            $('.fillWidth source')[1].src = $('.fillWidth source')[0].src + '?' + new Date().getTime();
+        }, 1000);
     });
 
     function scaleVideoContainer() {
@@ -42,8 +65,6 @@
         windowHeight = $(window).height() + 5,
         videoWidth,
         videoHeight;
-
-        console.log(windowHeight);
 
         $(element).each(function () {
             var videoAspectRatio = $(this).data('height') / $(this).data('width');
