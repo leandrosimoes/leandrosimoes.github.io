@@ -28,6 +28,7 @@
 
                 var source1 = document.createElement('source');
                 var source2 = document.createElement('source');
+                var source3 = document.createElement('source');
 
                 source1.setAttribute('type', 'video/mp4');
                 source1.setAttribute('src', '/assets/videos/cover.mp4?' + new Date().getTime()); 
@@ -35,8 +36,11 @@
                 source2.setAttribute('type', 'video/webm'); 
                 source2.setAttribute('src', '/assets/videos/cover.webm?' + new Date().getTime()); 
 
+                source3.setAttribute('src', '/assets/videos/cover.mp4?' + new Date().getTime());
+
                 video.appendChild(source1);
                 video.appendChild(source2);
+                video.appendChild(source3);
 
                 video.load();
                 video.play();
