@@ -33,12 +33,12 @@
                 var source3 = document.createElement('source');
 
                 source1.setAttribute('type', 'video/mp4');
-                source1.setAttribute('src', '/assets/videos/cover.mp4?' + new Date().getTime()); 
+                source1.setAttribute('src', 'http://lesimoes.com.br/assets/videos/cover.mp4?1479947458240?' + new Date().getTime());
 
                 source2.setAttribute('type', 'video/webm'); 
-                source2.setAttribute('src', '/assets/videos/cover.webm?' + new Date().getTime()); 
+                source2.setAttribute('src', 'http://lesimoes.com.br/assets/videos/cover.webm?' + new Date().getTime());
 
-                source3.setAttribute('src', '/assets/videos/cover.mp4?' + new Date().getTime());
+                source3.setAttribute('src', 'http://lesimoes.com.br/assets/videos/cover.mp4?' + new Date().getTime());
 
                 video.appendChild(source1);
                 video.appendChild(source2);
