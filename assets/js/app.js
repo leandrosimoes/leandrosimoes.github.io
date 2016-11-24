@@ -1,6 +1,8 @@
 ﻿;(function () {
     //jQuery is required to run this code
     $(document).ready(function () {
+        console.log('ready');
+
         $('.fillWidth').toggleClass('hidden');
         $('.poster').toggleClass('hidden');
 
@@ -18,7 +20,7 @@
             scaleBannerVideoSize('.video-container video');
         });
 
-        setTimeout(function () {
+        //setTimeout(function () {
             var video = $('.fillWidth')[0];
             if (video.canPlayType) {
                 console.log('canplay');
@@ -42,10 +44,14 @@
                 video.appendChild(source2);
                 video.appendChild(source3);
 
-                video.load();
-                video.play();
+                setInterval(function () {
+                    console.log('play');
+
+                    video.load();
+                    video.play();
+                }, 5000);
             }
-        }, 1000);
+        //}, 1000);
     });
 
     function scaleVideoContainer() {
