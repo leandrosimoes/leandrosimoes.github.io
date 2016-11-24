@@ -1,25 +1,9 @@
-﻿; (function () {
-    window.addEventListener('load', function () {
-        var video = document.querySelector('.fillWidth');
-        var preloader = document.querySelector('.poster');
-
-        function checkLoad() {
-            if (video.readyState === 4) {
-                $('.fillWidth').toggleClass('hidden');
-                $('.poster').toggleClass('hidden');
-                console.log('foi');
-            } else {
-                setTimeout(checkLoad, 100);
-            }
-        }
-
-        checkLoad();
-    }, false);
-
+﻿;(function () {
     //jQuery is required to run this code
     $(document).ready(function () {
         $('.fillWidth').toggleClass('hidden');
         $('.poster').toggleClass('hidden');
+
 
         scaleVideoContainer();
 
@@ -35,8 +19,28 @@
         });
 
         setTimeout(function () {
-            $('.fillWidth source')[0].src = $('.fillWidth source')[0].src + '?' + new Date().getTime();
-            $('.fillWidth source')[1].src = $('.fillWidth source')[0].src + '?' + new Date().getTime();
+            var video = $('.fillWidth')[0];
+            if (video.canPlayType) {
+                console.log('canplay');
+
+                $(video).toggleClass('hidden');
+                $('.poster').toggleClass('hidden');
+
+                var source1 = document.createElement('source');
+                var source2 = document.createElement('source');
+
+                source1.setAttribute('type', 'video/mp4');
+                source1.setAttribute('src', '/assets/videos/cover.mp4?' + new Date().getTime()); 
+
+                source2.setAttribute('type', 'video/webm'); 
+                source2.setAttribute('src', '/assets/videos/cover.webm?' + new Date().getTime()); 
+
+                video.appendChild(source1);
+                video.appendChild(source2);
+
+                video.load();
+                video.play();
+            }
         }, 1000);
     });
 
