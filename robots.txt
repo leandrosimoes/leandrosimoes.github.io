@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://lesimoes.com.br/sitemap.xml
