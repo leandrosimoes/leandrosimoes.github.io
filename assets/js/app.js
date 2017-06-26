@@ -39,7 +39,7 @@
             at = '@',
             host = 'outlook.com';
 
-        $('#personal-email').attr('href', 'mailto:' + name + at + host);
+        $('#personal-email').attr('href', 'mailto:' + name + at + host).text(name + at + host);
     });
 
     function scaleVideoContainer() {
