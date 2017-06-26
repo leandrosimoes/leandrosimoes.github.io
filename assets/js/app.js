@@ -32,6 +32,14 @@
             $('.fillWidth').toggleClass('hidden');
             $('.poster').toggleClass('hidden');
         }
+
+
+        // To avoid spamers
+        var name = 'leandro.simoes',
+            at = '@',
+            host = 'outlook.com';
+
+        $('#personal-email').attr('href', 'mailto:' + name + at + host);
     });
 
     function scaleVideoContainer() {
