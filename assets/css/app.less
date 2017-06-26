@@ -10,10 +10,10 @@ body {
     height: 100%;
 
     #main {
-        width: 100%;        
+        width: 100%;
         height: 100%;
 
-        header {           
+        header {
             height: 100%;
 
             &:after {
@@ -21,7 +21,7 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;                
+                width: 100%;
                 background-color: rgb(255, 255, 255);
                 opacity: .3;
                 z-index: 997;
@@ -33,14 +33,17 @@ body {
                 border-left: none;
                 position: relative;
             }
+
             .no-video .video-container video,
             .touch .video-container video {
                 display: none;
             }
+
             .no-video .video-container .poster,
             .touch .video-container .poster {
                 display: block !important;
             }
+
             .video-container {
                 position: relative;
                 bottom: 0%;
@@ -50,22 +53,26 @@ body {
                 overflow: hidden;
                 background: #000;
             }
+
             .video-container .poster img {
                 width: 100%;
                 bottom: 0;
                 position: absolute;
             }
+
             .video-container .filter {
                 z-index: 100;
                 position: absolute;
                 background: rgba(0, 0, 0, 0.4);
                 width: 100%;
             }
+
             .video-container video {
                 position: absolute;
                 z-index: 0;
                 bottom: 0;
             }
+
             .video-container video.fillWidth {
                 width: 100%;
             }
@@ -113,7 +120,7 @@ body {
             &#about {
                 position: relative;
                 top: 0;
-                background-color: #fff;                
+                background-color: #fff;
                 .alignVertically();
                 z-index: 999;
             }
@@ -121,10 +128,19 @@ body {
             .area-content {
                 padding: 10px 50px;
                 text-align: center;
+
+                .addthis_inline_follow_toolbox {
+                    max-width: 180px;
+                    margin: 0 auto;
+
+                    p {
+                        display: none !important;
+                    }
+                }
             }
 
             .area-socials {
-                font-size: 50px;
+                font-size: 38px;
 
                 a {
                     text-decoration: none;

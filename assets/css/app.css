@@ -185,9 +185,18 @@ body #main .area .area-content {
   padding: 10px 50px;
   text-align: center;
 }
+html #main .area .area-content .addthis_inline_follow_toolbox,
+body #main .area .area-content .addthis_inline_follow_toolbox {
+  max-width: 180px;
+  margin: 0 auto;
+}
+html #main .area .area-content .addthis_inline_follow_toolbox p,
+body #main .area .area-content .addthis_inline_follow_toolbox p {
+  display: none !important;
+}
 html #main .area .area-socials,
 body #main .area .area-socials {
-  font-size: 50px;
+  font-size: 38px;
 }
 html #main .area .area-socials a,
 body #main .area .area-socials a {

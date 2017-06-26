@@ -1,0 +1,9 @@
+[
+  {
+    "outputFileName": "assets/js/app.min.js",
+    "inputFiles": [
+      "assets/js/app.js"
+    ],
+    "sourceMap": true
+  }
+]
