@@ -50,6 +50,14 @@ body {
   width: 100%;
   height: 100%;
 }
+html div#at4-share,
+body div#at4-share {
+  opacity: .5;
+}
+html div#at4-share:hover,
+body div#at4-share:hover {
+  opacity: 1;
+}
 html #main,
 body #main {
   width: 100%;
