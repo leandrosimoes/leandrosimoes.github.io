@@ -3,11 +3,28 @@
     margin-bottom: 30px;
 }
 
-#posts article {
+#posts:not(.no-posts) article {
+    display: block;
+}
+
+#posts article, #posts .no-posts-area {
     text-align: left;
     border: 1px dotted #aaa;
     padding: 30px 10px; 
     margin-bottom: 10px;
+}
+
+#posts:not(.no-posts) .no-posts-area {
+    display: none;
+}
+
+#posts.no-posts .no-posts-area {
+    text-align: center;
+    display: block;
+}
+
+#posts.no-posts article, #posts.no-posts #more-posts {
+    display: none;
 }
 
 #posts article h2 {
