@@ -3,11 +3,16 @@
     margin-bottom: 30px;
 }
 
-#posts:not(.no-posts) article {
-    display: block;
+#posts:not(.loading) .loading-posts-area {
+    display: none;
 }
 
-#posts article, #posts .no-posts-area {
+#posts:not(.no-posts) article {
+    display: block;
+    position: relative;
+}
+
+#posts article, #posts .no-posts-area, #posts .loading-posts-area {
     text-align: left;
     border: 1px dotted #aaa;
     padding: 30px 10px; 
@@ -18,12 +23,12 @@
     display: none;
 }
 
-#posts.no-posts .no-posts-area {
+#posts.no-posts .no-posts-area, #posts .loading-posts-area {
     text-align: center;
     display: block;
 }
 
-#posts.no-posts article, #posts.no-posts #more-posts {
+#posts.no-posts article {
     display: none;
 }
 
@@ -33,4 +38,12 @@
 
 #posts article a {
     float: right;
+}
+
+#posts article span.post-date {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #aaa;
 }

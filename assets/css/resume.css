@@ -1,0 +1,26 @@
+#resume {
+    text-align: left;
+}
+
+#resume a {
+    margin: 0 !important;
+}
+
+#resume h1, #resume h2, #resume p {
+    margin: 20px 0 !important;
+}
+
+#resume #btn-print {
+    background-color: #fff;
+    border: 1px solid #424242;
+    padding: 10px 35px;
+    float: right;
+    cursor: pointer;
+    outline: none;
+}
+#resume #btn-print:hover {
+    background-color: #f2f2f2;
+}
+#resume #btn-print:active {
+    background-color: #d4d4d4;
+}

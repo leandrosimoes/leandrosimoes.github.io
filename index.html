@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./assets/css/site.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/posts.css">
+    <link rel="stylesheet" href="./assets/css/resume.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/scroll-bar.css">
 
@@ -71,15 +72,12 @@
             <div class="no-posts-area">
                 Sorry, I have any post yet! I'll post soon tho!
             </div>
-            <article>
-                <h2 class="title-font">My first post</h2>
-                <div class="content">
-                    This is a short abreviation about my post, I'll put some quicly informations and descriptions here, and this is it.
-                </div>
-                <a href="#">read post</a>
-            </article>
-            <a id="more-posts" href="#">more posts</a>
+            <div class="loading-posts-area">
+                Loading posts...
+            </div>
+            <div class="articles-area"></div>
         </div>
+        <div id="read-post" class="page"></div>        
         <div id="about" class="page">
             <h2 class="title-font">Who Am I ?</h2>
             <p>
@@ -107,7 +105,8 @@
             </p>
         </div>
         <div id="resume" class="page">
-            <h2 class="title-font">My Résumé</h2>
+            <button type="button" id="btn-print">Print</button>
+            <div class="resume-area"></div>        
         </div>
     </main>
     <footer>
@@ -123,6 +122,10 @@
         </div>
     </footer>
 
+    <script src="./assets/js/showdown.min.js"></script>
+    <script src="./assets/js/github-wrapper.js"></script>
+    <script src="./assets/js/posts.js"></script>
+    <script src="./assets/js/resume.js"></script>
     <script src="./assets/js/app.js"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->

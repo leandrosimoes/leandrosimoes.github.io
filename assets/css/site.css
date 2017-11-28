@@ -13,6 +13,17 @@ h1,
 h2 {
     margin: 0;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table thead th {
+    background-color: #f2f2f2; 
+}
+table td, table th {
+    border: 1px solid #aaa;
+}
 
 .title-font {
     font-family: 'Lobster', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -57,4 +68,18 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media print {
+    header,
+    footer, 
+    #menu,
+    #resume > div > div > p:nth-child(1),
+    #btn-print {
+        display: none !important;
+    }
+
+    main {
+        margin: 10px !important;
+    }
 }
