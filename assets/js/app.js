@@ -73,7 +73,7 @@
         .then((result) => {
             if (result.length <= 0) {
                 $(pages.posts).addClass('no-posts');
-                $(pages.posts)[0].querySelector('.articles-area').html('');
+                $($(pages.posts)[0].querySelector('.articles-area')).html('');
             } else {
                 result.forEach((p) => {
                     $(pages.posts)[0].querySelector('.articles-area').appendChild(p.getPostThumbnail());

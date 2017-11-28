@@ -24,17 +24,17 @@ class Post {
         let comments = findComments(htmlParsed);
 
         if (!!comments && comments.length > 0) {
-            this.title = comments.filter((c) => { c.data.indexOf('LsTitle') !== -1 })[0] || '';
-            this.abreviation = comments.filter((c) => { c.data.indexOf('LsAbreviation') !== -1 })[0] || '';
-            this.postDate = comments.filter((c) => { c.data.indexOf('LsPostDate') !== -1 })[0] || '';
+            this.title = comments.filter((c) => { return c.data.indexOf('LsTitle') !== -1 })[0].data.replace('LsTitle:', '').trim() || '';
+            this.abreviation = comments.filter((c) => { return c.data.indexOf('LsAbreviation') !== -1 })[0].data.replace('LsAbreviation:', '').trim() || '';
+            this.postDate = comments.filter((c) => { return c.data.indexOf('LsPostDate') !== -1 })[0].data.replace('LsPostDate:', '').trim() || '';
         } else {
             this.title = htmlParsed.getElementsByTagName('h1')[0].innerText || '';
             this.abreviation = htmlParsed.getElementsByTagName('p')[0].innerText || '';
         }
 
         this.title = this.title || 'No title';
-        this.abreviation = (this.abreviation || 'No short description').substring(0, 300);
-        this.postDate = this.postDate || `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
+        this.abreviation = (this.abreviation || 'No short description').substring(0, 250) + '...';
+        this.postDate = this.postDate || `${new Date().toLocaleDateString('pt-br')} ${new Date().toLocaleTimeString('pt-br')}`;
     }
 
     getPostThumbnail() {
