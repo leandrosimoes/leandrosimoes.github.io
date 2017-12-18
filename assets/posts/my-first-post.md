@@ -4,7 +4,7 @@
 
 # My first personal post!
 
-This is my first post on my new blog at my new personal website layout. I made this new layout to study the [GitHub Api](https://developer.github.com/v3/), so, this post that you are reading came from a markdown file [here](https://github.com.br/leandrosimoes/leandrosimoes.github.io) at my personal website github repository!
+This is my first post on my new blog at my new personal website layout. I made this new layout to study the [GitHub Api](https://developer.github.com/v3/), so, this post that you are reading came from a markdown file [here](https://github.com/leandrosimoes/leandrosimoes.github.io/blob/master/assets/posts/my-first-post.md) at my personal website github repository!
 
 ## How did you do that?
 
