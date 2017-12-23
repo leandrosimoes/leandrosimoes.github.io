@@ -83,3 +83,8 @@ a:hover {
         margin: 10px !important;
     }
 }
+
+/* Add This Customizations */
+span.at-icon-wrapper {
+    background-color: #424242 !important;
+}
