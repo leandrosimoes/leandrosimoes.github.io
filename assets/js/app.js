@@ -75,7 +75,7 @@
                 $(pages.posts).addClass('no-posts');
                 $($(pages.posts)[0].querySelector('.articles-area')).html('');
             } else {
-                result = result.sort((a, b) => { return a.postDate < b.postDate });
+                result = result.sort((a, b) => { return a.postDate > b.postDate });
                 result.forEach((p) => {
                     $(pages.posts)[0].querySelector('.articles-area').appendChild(p.getPostThumbnail());
                 });
