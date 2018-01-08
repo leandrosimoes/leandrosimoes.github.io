@@ -4,11 +4,11 @@
 
 # Sigh of Relief!
 
-Finally we found the solution for our server problems that drives me crazy last week! OMG I'm so relief! Now I can sleep again after amost two weeks!
+Finally we found the solution for our server problems that drove me crazy last week! OMG I'm so relief! Now I can sleep again after amost two weeks!
 
 ### WTF was the problem?!
 
-Well, was a query that hangs the DB server so hard that another queries was getting timeout exception and than the latency was increasing up to the sky and etc etc etc
+Well, was a query that hanged the DB server so hard that another queries was getting timeout exception and than the latency was increasing up to the sky and etc etc etc
 
 ### WOOHOOO!
 
