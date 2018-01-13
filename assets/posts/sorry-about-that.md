@@ -1,5 +1,5 @@
 <!-- LsTitle: Sorry About That! -->
-<!-- LsAbreviation: Finally we found the solution for our server problems that drives me crazy last week! OMG I'm so relief... -->
+<!-- LsAbreviation: OMG! In my last post I was so excited about solve the server issues that I forget to say that I really wish you guys... -->
 <!-- LsPostDate: 13/01/2018 14:46:36 -->
 
 # Sorry About That!

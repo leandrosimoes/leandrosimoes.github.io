@@ -52,6 +52,18 @@
                 });
         });
     };
+    transformDate = (d) => {
+        var dateObject = {
+            date: {
+                day: d.split(' ')[0].split('/')[0],
+                month: d.split(' ')[0].split('/')[1],
+                year: d.split(' ')[0].split('/')[2],
+            },
+            hour: d.split(' ')[1]
+        };
+
+        return new Date(`${dateObject.date.year}-${dateObject.date.month}-${dateObject.date.day} ${dateObject.hour}`);
+    }
     $('a.pagination').on('click', (e) => {
         openPage($(e.currentTarget).data('page'));
         e.preventDefault();
@@ -75,7 +87,9 @@
                 $(pages.posts).addClass('no-posts');
                 $($(pages.posts)[0].querySelector('.articles-area')).html('');
             } else {
-                result = result.sort((a, b) => { return a.postDate > b.postDate });
+                result = result.sort((a, b) => { 
+                    return transformDate(a.postDate) <= transformDate(b.postDate) 
+                });
                 result.forEach((p) => {
                     $(pages.posts)[0].querySelector('.articles-area').appendChild(p.getPostThumbnail());
                 });
