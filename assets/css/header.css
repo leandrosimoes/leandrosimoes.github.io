@@ -15,3 +15,58 @@ header #profile-picture {
     font-style: italic;
     position: relative;
 }
+
+header img {
+    animation: alternateColor 3s ease-in-out infinite;
+    -webkit-animation: alternateColor 3s ease-in-out infinite;
+    -o-animation: alternateColor 3s ease-in-out infinite;
+    -moz-animation: alternateColor 3s ease-in-out infinite;
+}
+
+@keyframes alternateColor {
+    0% {
+        filter: grayscale(1);
+    }
+    50% {
+        filter: grayscale(0);
+    }
+    100% {
+        filter: grayscale(1);
+    }
+}
+
+@-o-keyframes alternateColor {
+    0% {
+        filter: grayscale(1);
+    }
+    50% {
+        filter: grayscale(0);
+    }
+    100% {
+        filter: grayscale(1);
+    }
+}
+
+@-webkit-keyframes alternateColor {
+    0% {
+        filter: grayscale(1);
+    }
+    50% {
+        filter: grayscale(0);
+    }
+    100% {
+        filter: grayscale(1);
+    }
+}
+
+@-moz-keyframes alternateColor {
+    0% {
+        filter: grayscale(1);
+    }
+    50% {
+        filter: grayscale(0);
+    }
+    100% {
+        filter: grayscale(1);
+    }
+}
