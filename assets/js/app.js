@@ -120,6 +120,6 @@
     });
     slideUpButton.onclick = (e) => {
         window.scrollTo(0,0);
-        e.preventDefault();
     };
+    document.querySelectorAll('a').forEach(link => link.onclick = (e) => { e.preventDefault(); });
 })();
