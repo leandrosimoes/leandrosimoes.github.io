@@ -87,8 +87,8 @@
                 $(pages.posts).addClass('no-posts');
                 $($(pages.posts)[0].querySelector('.articles-area')).html('');
             } else {
-                result = result.sort((a, b) => { 
-                    return transformDate(a.postDate) <= transformDate(b.postDate) 
+                result = result.sort((a, b) => {
+                    return transformDate(a.postDate) <= transformDate(b.postDate)
                 });
                 result.forEach((p) => {
                     $(pages.posts)[0].querySelector('.articles-area').appendChild(p.getPostThumbnail());
@@ -102,4 +102,24 @@
         });
 
     openPage('posts');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (this.readyState != 'loading') {
+            let embedium = new Embedium('leandrossimoes');
+            embedium.embedTo(document.querySelector('#medium'));
+        }
+    })
+
+    let slideUpButton = document.querySelector('#slide-up-button');
+    window.addEventListener('scroll', (e) => {
+        if (window.scrollY > 100) {
+            slideUpButton.style.display = 'block';
+        } else {
+            slideUpButton.style.display = 'none';
+        }
+    });
+    slideUpButton.onclick = (e) => {
+        window.scrollTo(0,0);
+        e.preventDefault();
+    };
 })();

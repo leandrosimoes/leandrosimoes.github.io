@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="./assets/css/resume.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/scroll-bar.css">
+    <link rel="stylesheet" href="./assets/css/embedium.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -126,6 +127,7 @@
     </header>
     <div id="menu">
         <a class="pagination" href="#" data-page="posts">Diary</a>
+        <a class="pagination" href="#" data-page="medium">Medium</a>
         <a class="pagination" href="#" data-page="about">About</a>
         <a class="pagination" href="#" data-page="resume">Résumé</a>
     </div>
@@ -138,6 +140,9 @@
                 Loading thoughts...
             </div>
             <div class="articles-area"></div>
+        </div>
+        <div id="medium" class="page">
+            Loading Medium stories...
         </div>
         <div id="read-post" class="page"></div>
         <div id="about" class="page">
@@ -186,8 +191,10 @@
         <div>
             &copy; 2017 Copyright Le Simões | All rights reserved.
         </div>
+        <a id="slide-up-button" href="#"><img src="./assets/images/arrow-up.png" alt="Just an arrow to slide the page up"></a>
     </footer>
 
+    <script src="./assets/js/embedium.min.js"></script>
     <script src="./assets/js/showdown.min.js"></script>
     <script src="./assets/js/github-wrapper.js"></script>
     <script src="./assets/js/posts.js"></script>
