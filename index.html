@@ -2,37 +2,36 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
 
     <!-- Primary Meta Tags -->
-    <title>Leandro Simões Personal Website and Blog</title>
+    <meta charset="UTF-8">
     <meta name="title" content="Leandro Simões Web Page">
     <meta name="description" content="My name is Leandro Simões, I'm a Software Engineer from São José do Rio Preto, São Paulo, Brazil.">
     <meta name="creator" content="Leandro Simões" />
     <meta itemprop="author" name="author" content="Leandro Simões" />
     <meta name="copyright" content="&copy; 2018 Leandro Simões" />
     <meta name="keywords" content="web developer, brazilian, front-end developer, software engineer, full-stack developer, back-end developer, freelancer, web designer, portfolio, personal website, curriculum online, online resume" />
-    <link rel="canonical" href="http://lesimoes.com.br" itemprop="url" />
-    <title itemprop="name">Leandro Simões Personal Website and Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="canonical" href="https://lesimoes.com.br" itemprop="url" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <!-- <meta property="og:type" content="website">
     <meta property="og:url" content="https://lesimoes.com.br/">
     <meta property="og:title" content="Leandro Simões Web Page">
     <meta property="og:description" content="My name is Leandro Simões, I'm a Software Engineer from São José do Rio Preto, São Paulo, Brazil.">
-    <meta property="og:image" content="http://lesimoes.com.br/assets/images/profile.jpeg">
+    <meta property="og:image" content="https://lesimoes.com.br/assets/images/profile.jpeg"> -->
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
+    <!-- <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lesimoes.com.br/">
     <meta property="twitter:title" content="Leandro Simões Web Page">
     <meta property="twitter:description" content="My name is Leandro Simões, I'm a Software Engineer from São José do Rio Preto, São Paulo, Brazil.">
-    <meta property="twitter:image" content="http://lesimoes.com.br/assets/images/profile.jpeg" />
+    <meta property="twitter:image" content="https://lesimoes.com.br/assets/images/profile.jpeg" /> -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/apple-icon-76x76.png">
@@ -48,163 +47,97 @@
     <link rel="manifest" href="./assets/images/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/images/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
 
-    <link rel="alternate" href="http://lesimoes.com.br/" hreflang="x-default" />
+    <link rel="alternate" href="https://lesimoes.com.br/" hreflang="x-default" />
 
-    <link rel="stylesheet" href="./assets/css/site.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/posts.css">
-    <link rel="stylesheet" href="./assets/css/resume.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/scroll-bar.css">
+    <!-- Sylesheets -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <!-- Google Analytics -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400|Roboto+Slab:100,400" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
         (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-101651394-1', 'auto');
         ga('send', 'pageview');
-
     </script>
+
+    <title itemprop="name">Leandro Simões Personal Website</title>
 </head>
 
 <body>
-    <!-- http://tholman.com/github-corners/ -->
-    <a target="_blank" href="https://github.com/leandrosimoes/leandrosimoes.github.io" class="github-corner" aria-label="View source on Github">
-        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#424242; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
-            aria-hidden="true">
-            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-                fill="currentColor" class="octo-body"></path>
-        </svg>
-    </a>
-    <style>
-        .github-corner:hover .octo-arm {
-            animation: octocat-wave 560ms ease-in-out
-        }
-
-        @keyframes octocat-wave {
-            0%,
-            100% {
-                transform: rotate(0)
-            }
-            20%,
-            60% {
-                transform: rotate(-25deg)
-            }
-            40%,
-            80% {
-                transform: rotate(10deg)
-            }
-        }
-
-        @media (max-width:500px) {
-            .github-corner:hover .octo-arm {
-                animation: none
-            }
-            .github-corner .octo-arm {
-                animation: octocat-wave 560ms ease-in-out
-            }
-        }
-    </style>
 
     <header>
-        <img width="250" src="./assets/images/logo-le-simoes-azul.png" alt="Logotipo da empresa Le Simões composto por uma letra L e uma letra E unidas formando um lozango">
-        <div class="separator"></div>
-        <h1 class="title-font extra-large-font-size">Le Simões</h1>
-        <div class="separator"></div>
-        <p class="quote">
-            &quot;We haven't access to happiness source code, but we can try hard and learn how to hack it.&quot;
-        </p>
+        <div class="header-wrap">
+            <div class="title">
+                <h6>Hi! My name is</h6>
+                <h1>Leandro Simões</h1>
+                <h6>and I have been coding for about</h6>
+            </div>
+            <div class="counter">
+                <span class="days">00d</span><span class="hours">00h</span><span class="minutes">00m</span><span class="seconds">00s</span>
+            </div>
+        </div>
     </header>
-    <div id="menu">
-        <a class="pagination" href="#" data-page="posts">Diary</a>
-        <a class="pagination" href="#" data-page="medium">Medium</a>
-        <a class="pagination" href="#" data-page="about">About</a>
-        <a class="pagination" href="#" data-page="resume">Résumé</a>
-    </div>
+
+    <menu>
+        <div class="menu-wrap">
+            <a target="_blank" href="/" class="home-link">
+                <h3>LS</h3>
+            </a>
+            <a target="_blank" href="#"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-codepen"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-medium-m"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-stack-overflow"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </menu>
+
     <main>
-        <div id="posts" class="page">
-            <div class="no-posts-area">
-                Sorry, I have any thoughts yet! But I'll write something soon. I promise!
+        <div class="content-wrap">
+            <img src="./assets/images/me.png" alt="Leandro Simões da Silva at the I Amsterdam Sign in Amsterdan, Netherlands">
+            <div class="description">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repudiandae dignissimos ex quod ducimus ipsa, a at porro
+                    soluta voluptate quidem veritatis et dolorem ullam voluptatum
+                    illum fugiat enim odio corrupti.
+                </p>
+                <a target="_blank" href="#" class="resume-button">Résumé</a>
             </div>
-            <div class="loading-posts-area">
-                Loading thoughts...
-            </div>
-            <div class="articles-area"></div>
-        </div>
-        <div id="medium" class="page">
-            Loading Medium stories...
-        </div>
-        <div id="read-post" class="page"></div>
-        <div id="about" class="page">
-            <h2 class="title-font">Who Am I ?</h2>
-            <p>
-                ... What should I do? What's my reason of life?
-            </p>
-            <div class="separator"></div>
-            <p>
-                This are some of the questions that I made for myself many and many times. And to be honest, this questions really scary
-                me for a while.
-            </p>
-            <br>
-            <p>
-                Today I am greatfull to have all the answers for all that questions.
-            </p>
-            <p>
-                I know, for example, that I'm a really happy
-                <b>Full-Stack Developer</b> from Brazil. I know that this is exactly what I want to do, and I know that this
-                is just one of the many reasons that I have for my life, for sure!
-            </p>
-            <br>
-            <p>
-                If you want to know more about my personal life, feel free to follow me in my
-                <b>social medias</b>.
-                <b>The links are in the footer of this page</b>.
-            </p>
-            <p>
-                If you want to know more about my professional life you can see my
-                <a class="pagination" href="#" data-page="resume">résumé page</a>
-            </p>
-        </div>
-        <div id="resume" class="page">
-            <button type="button" id="btn-print">Print</button>
-            <div class="resume-area"></div>
         </div>
     </main>
+
     <footer>
-        <div id="social">
-            <a target="_blank" href="https://www.facebook.com/Simoes.Leandro.Silva">Facebook</a>
-            <a target="_blank" href="https://twitter.com/leandro_ssimoes">Twitter</a>
-            <a target="_blank" href="https://www.instagram.com/leandro.ssimoes/">Instagram</a>
-            <a target="_blank" href="https://medium.com/@leandrossimoes">Medium</a>
-            <a target="_blank" href="https://github.com/leandrosimoes">GitHub</a>
+        <div class="address">
+            <a target="_blank" href="#">Irmã Heloísa Helena de Campos Melo, 505, São José do Rio Preto, São Paulo <i
+                    class="far fa-map"></i></a><br>
+            <a target="_blank" href="#">+55 17 98820 4506 <i class="fab fa-whatsapp"></i></a><br>
+            <a href="mailto:leandro.simoes@outlook.com">leandro.simoes@outlook.com <i class="far fa-envelope"></i></a>
         </div>
-        <div>
-            &copy; 2017 Copyright Le Simões | All rights reserved.
+        <div class="signature">
+            &copy; Leandro Simões
         </div>
-        <a id="slide-up-button" href="#"><img src="./assets/images/arrow-up.png" alt="Just an arrow to slide the page up"></a>
     </footer>
 
-    <script src="./assets/js/embedium.min.js"></script>
-    <script src="./assets/js/showdown.min.js"></script>
-    <script src="./assets/js/github-wrapper.js"></script>
-    <script src="./assets/js/posts.js"></script>
-    <script src="./assets/js/resume.js"></script>
-    <script src="./assets/js/app.js"></script>
-
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59510b13dc8bd7a4"></script>
+    <script src="./assets/js/fontawesome.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
