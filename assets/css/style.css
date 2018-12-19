@@ -17,12 +17,20 @@ body {
     color: var(--white);
 }
 
+body .highlight {
+    color: var(--red);
+}
+
 body a,
 body a:visited,
-body a:hover,
 body a:active {
     text-decoration: none;
     color: var(--white);
+    transition: all .1s linear;
+}
+
+body a:hover {
+    color: var(--red);
 }
 
 body.loading {
@@ -30,7 +38,7 @@ body.loading {
 }
 
 body.loading::after {
-    content: 'Carregando';
+    content: 'Loading...';
     position: fixed;
     background-color: var(--blue);
     color: var(--white);
@@ -39,6 +47,11 @@ body.loading::after {
     right: 0;
     bottom: 0;
     z-index: 999;
+    font-family: 'Roboto Slab';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }
 
 h1,
@@ -90,15 +103,66 @@ header .header-wrap .counter {
 header .header-wrap .title h1,
 header .header-wrap .counter span {
     font-weight: 100;
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
 }
 
 header .header-wrap .counter span {
     font-size: 4em;
+    opacity: 0;
+    animation-delay: 1s !important;
+}
+
+header .header-wrap .counter span.show {
+    animation: fadein 1s forwards;
 }
 
 header .header-wrap .counter span:not(:first-child) {
     margin-left: 20px
+}
+
+header .mouse {
+    text-align: center;
+    padding-top: 50px;
+}
+
+header .mouse svg #wheel {
+    animation: scroll ease 2s infinite;
+}
+
+main {
+    height: 680px;
+    background-image: url('../images/main-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .content-wrap {
+    width: 800px;
+    height: 680px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+main .content-wrap .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+main .content-wrap .description p {
+    font-size: 1.5em;
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    padding: 0 20px;
+    text-align: left;
 }
 
 menu {
@@ -123,6 +187,20 @@ menu .menu-wrap {
     justify-content: space-between
 }
 
+menu a.resume-button {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    outline: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    transition: all .1s linear;
+}
+
+menu a.resume-button:hover {
+    border-color: var(--red);
+}
+
 menu .menu-wrap a.home-link {
     border-bottom: 1px solid #fff;
 }
@@ -135,44 +213,6 @@ menu .menu-wrap h3 {
     font-family: var(--primary-font);
     font-weight: 100;
     font-size: 3em;
-}
-
-main {
-    height: 680px;
-    background-image: url('../images/main-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-main .content-wrap {
-    width: 800px;
-    height: 680px;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    text-align: center;
-    justify-content: space-between;
-}
-
-main .content-wrap p {
-    font-size: 1.8em;
-    font-family: var(--secondary-font);
-    font-weight: 100;
-    padding: 0 20px;
-}
-
-main .content-wrap a.resume-button {
-    background-color: transparent;
-    border: 2px solid var(--white);
-    outline: none;
-    padding: 10px 30px;
-    color: var(--white);
-    cursor: pointer;
-    font-family: var(--primary-font);
 }
 
 footer {
@@ -193,7 +233,7 @@ footer .address,
 footer .signature {
     padding: 20px;
     flex: 1;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
     height: 100px;
 }
 
@@ -203,4 +243,24 @@ footer .signature {
 
 footer .signature {
     text-align: right;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(60px);
+    }
 }
