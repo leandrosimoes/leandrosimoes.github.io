@@ -1,0 +1,266 @@
+:root {
+    --blue: #0a1928;
+    --red: #d72f2e;
+    --black: #020304;
+    --white: #fff;
+    --primary-font: Raleway, Arial, sans-serif;
+    --secondary-font: 'Roboto Slab', Verdana, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+body .highlight {
+    color: var(--red);
+}
+
+body a,
+body a:visited,
+body a:active {
+    text-decoration: none;
+    color: var(--white);
+    transition: all .1s linear;
+}
+
+body a:hover {
+    color: var(--red);
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading::after {
+    content: 'Loading...';
+    position: fixed;
+    background-color: var(--blue);
+    color: var(--white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    font-family: 'Roboto Slab';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/header-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-wrap .title h1 {
+    font-size: 6em;
+    line-height: 80px;
+}
+
+header .header-wrap .title h6:first-child {
+    margin-left: 7px;
+}
+
+header .header-wrap .title h6:last-child {
+    text-align: right;
+}
+
+header .header-wrap .title h6 {
+    font-size: 2em;
+    font-family: var(--secondary-font);
+    font-weight: 100;
+}
+
+header .header-wrap .counter {
+    text-align: center;
+    padding-top: 40px;
+}
+
+header .header-wrap .title h1,
+header .header-wrap .counter span {
+    font-weight: 100;
+    font-family: var(--secondary-font);
+}
+
+header .header-wrap .counter span {
+    font-size: 4em;
+    opacity: 0;
+    animation-delay: 1s !important;
+}
+
+header .header-wrap .counter span.show {
+    animation: fadein 1s forwards;
+}
+
+header .header-wrap .counter span:not(:first-child) {
+    margin-left: 20px
+}
+
+header .mouse {
+    text-align: center;
+    padding-top: 50px;
+}
+
+header .mouse svg #wheel {
+    animation: scroll ease 2s infinite;
+}
+
+main {
+    height: 680px;
+    background-image: url('../images/main-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .content-wrap {
+    width: 800px;
+    height: 680px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+main .content-wrap .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+main .content-wrap .description p {
+    font-size: 1.5em;
+    font-family: var(--secondary-font);
+    font-weight: 100;
+    padding: 0 20px;
+    text-align: left;
+}
+
+menu {
+    background-color: var(--black);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+menu .menu-wrap {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+menu a.resume-button {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    outline: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    transition: all .1s linear;
+}
+
+menu a.resume-button:hover {
+    border-color: var(--red);
+}
+
+menu .menu-wrap a.home-link {
+    border-bottom: 1px solid #fff;
+}
+
+menu .menu-wrap svg {
+    font-size: 1.8em;
+}
+
+menu .menu-wrap h3 {
+    font-family: var(--primary-font);
+    font-weight: 100;
+    font-size: 3em;
+}
+
+footer {
+    font-family: var(--secondary-font);
+    height: 480px;
+    background-image: url('../images/footer-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+    font-weight: 100;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+footer .address,
+footer .signature {
+    padding: 20px;
+    flex: 1;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100px;
+}
+
+footer .signature {
+    line-height: 100px;
+}
+
+footer .signature {
+    text-align: right;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(60px);
+    }
+}
