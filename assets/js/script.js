@@ -1,5 +1,5 @@
 ;
-(() => {
+(document => {
     const body = document.querySelector('body')
     const ageElement = document.querySelector('span.age')
     const daysElement = document.querySelector('.days')
@@ -31,10 +31,10 @@
                     minutes,
                     seconds
                 }) => {
-                    document.querySelector('.days').innerHTML = days;
-                    document.querySelector('.hours').innerHTML = hours;
-                    document.querySelector('.minutes').innerHTML = minutes;
-                    document.querySelector('.seconds').innerHTML = seconds;
+                    daysElement.innerHTML = days;
+                    hoursElement.innerHTML = hours;
+                    minutesElement.innerHTML = minutes;
+                    secondsElement.innerHTML = seconds;
                 };
                 let options = new LsCountupOptions({
                     targetDate,
@@ -53,4 +53,4 @@
             body.classList.remove('loading')
         }
     })
-})();
+})(document || {});
