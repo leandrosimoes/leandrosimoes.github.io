@@ -70,6 +70,7 @@ header {
     background-image: url('../images/header-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     display: flex;
     flex-direction: row;
     justify-content: center;
