@@ -60,7 +60,13 @@
         
         background.forEach(b => {
             const currentPositionY = b.offsetTop || 0;
-            if (scrolled > b.offsetTop) b.style.backgroundPositionY = `${(scrolled - currentPositionY) * 0.5}px`
+            if (scrolled === 0) {
+                b.style.backgroundPositionY = '0px'
+            } else if (scrolled > b.offsetTop) {
+                b.style.backgroundPositionY = `${(scrolled - currentPositionY) * 0.5}px`  
+            } else {
+                b.style.backgroundPositionY = '0px'
+            }
         })
     })
 })(document || {});
