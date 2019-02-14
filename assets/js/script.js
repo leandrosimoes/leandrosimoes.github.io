@@ -53,4 +53,14 @@
             body.classList.remove('loading')
         }
     })
+
+    document.addEventListener('scroll', event => {
+        const scrolled = window.pageYOffset;
+        const background = document.querySelectorAll('.paralaxed-background')
+        
+        background.forEach(b => {
+            const currentPositionY = b.offsetTop || 0;
+            if (scrolled > b.offsetTop) b.style.backgroundPositionY = `${(scrolled - currentPositionY) * 0.5}px`
+        })
+    })
 })(document || {});

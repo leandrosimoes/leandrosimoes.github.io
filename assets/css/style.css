@@ -17,6 +17,11 @@ body {
     color: var(--white);
 }
 
+body .paralaxed-background {
+    background-position-y: 0px;
+    background-size: cover;
+}
+
 body .highlight {
     color: var(--red);
 }
