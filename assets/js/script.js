@@ -2,6 +2,7 @@
 (document => {
     const body = document.querySelector('body')
     const ageElement = document.querySelector('span.age')
+    const yearsElement = document.querySelector('.years')
     const daysElement = document.querySelector('.days')
     const hoursElement = document.querySelector('.hours')
     const minutesElement = document.querySelector('.minutes')
@@ -26,11 +27,13 @@
                     document.querySelectorAll('.counter span').forEach(item => item.classList.add('show'))
                 }
                 let onTick = ({
+                    years,
                     days,
                     hours,
                     minutes,
                     seconds
                 }) => {
+                    yearsElement.innerHTML = years;
                     daysElement.innerHTML = days;
                     hoursElement.innerHTML = hours;
                     minutesElement.innerHTML = minutes;
