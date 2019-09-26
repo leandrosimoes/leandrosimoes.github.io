@@ -270,3 +270,79 @@ footer .signature {
         transform: translateY(60px);
     }
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    header .header-wrap .title h1 {
+        font-size: 3em;
+        line-height: 1em;
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    header .header-wrap .title h6 {
+        font-size: 1.3em;
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    header .header-wrap .title h6:last-child {
+        text-align: center;
+    }
+
+    header .header-wrap .counter {
+        font-size: 1em;
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+
+    main .content-wrap img {
+        display: none;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    main .content-wrap {
+        width: 100%;
+        height: auto;
+    }
+    
+    main .content-wrap .description p {
+        font-size: 1.3em;
+    }
+
+    menu {
+        height: auto;
+        padding: 20px;
+    }
+
+    menu .menu-wrap {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: auto auto auto auto;
+        font-size: 1.3em;
+        grid-gap: 50px;
+        padding: 20px;
+    }
+
+    menu a.resume-button,
+    menu .menu-wrap a.home-link {
+        display: none;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .address, 
+    footer .signature {
+        height: 200px;
+        padding: 10px;
+        font-size: 1.3em;
+        text-align: center;
+    }
+}
