@@ -292,10 +292,14 @@ footer .signature {
     }
 
     header .header-wrap .counter {
-        font-size: 1em;
+        font-size: 0.8em;
         display: inline-grid;
         grid-template-columns: auto auto;
         width: 100%;
+    }
+
+    header .header-wrap .counter span.seconds {
+        grid-column: 1 / span 2;
     }
 
     main .content-wrap img {
